@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("Component References")]
     private SpriteRenderer playerSprite; // Temporary to show player death
     private Rigidbody playerRb;
-    private Collider playerCollider; // TODO: change to box/sphere/capsule
+    private CapsuleCollider playerCollider; // TODO: change to box/sphere/capsule
     //TODO: Ref game cartridge/manager
 
     [Header("Health Settings")]
@@ -19,8 +19,8 @@ public class PlayerHealth : MonoBehaviour
     {
         playerIsDead = false;
         health = 3.0f;
-        playerRb = GetComponent<Rigidbody>();
-        playerCollider = GetComponent<Collider>();
+        //playerRb = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<CapsuleCollider>();
     }
 
     void Update()
@@ -35,18 +35,18 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Edge of screen collision & obstacle collision
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-/*        if (collision.other.gameObject.tag == "ScreenEdge")
+        if (other.gameObject.tag == "ScreenEdge")
         {
             gameOverReason = "You were too slow";
             Debug.LogError("You were too slow"); //TODO: Remove after testing
         }
-        if (collision.other.gameObject.tag == "Obstacle")
+        if (other.gameObject.tag == "Obstacle")
         {
             health--;
             Debug.LogError("Hit obstacle"); //TODO: Remove after testing
-        }*/
+        }
     }
 
     public void Die(string gameOverReasonText)
