@@ -853,6 +853,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &385553112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385553115}
+  - component: {fileID: 385553114}
+  - component: {fileID: 385553113}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &385553113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385553112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fffed0e04da3404e9162afc4fb46014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMusic: {fileID: 0}
+  gameOverMusic: {fileID: 0}
+  pauseGameMusic: {fileID: 0}
+  takeDamageSound: {fileID: 0}
+  runningSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  powerUpSound: {fileID: 0}
+  catSound: {fileID: 0}
+  fallenTVSound: {fileID: 0}
+  player: {fileID: 1244809103}
+  pauseMenu: {fileID: 188242298}
+  gameOverMenu: {fileID: 1513944181}
+  score: 0
+  highScore: 0
+  isGameRunning: 0
+--- !u!114 &385553114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385553112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63031c0431f597c49893e091aad85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &385553115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385553112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 408.14282, y: 267.85715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530851113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1770,7 @@ MonoBehaviour:
   fallenTVSound: {fileID: 0}
   player: {fileID: 1244809103}
   pauseMenu: {fileID: 188242298}
+  gameOverMenu: {fileID: 0}
   score: 0
   highScore: 0
   isGameRunning: 0
@@ -2117,6 +2190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  gameManager: {fileID: 385553113}
 --- !u!136 &1244809112
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2808,7 +2882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7058017081600976720, guid: 773d3613eeda90a40a3ebd6a423ddfc0, type: 3}
       propertyPath: MoveSpeed
-      value: 4.1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7058017081600976731, guid: 773d3613eeda90a40a3ebd6a423ddfc0, type: 3}
       propertyPath: m_Name

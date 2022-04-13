@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Component References")]
     public GameObject player;
     public GameObject pauseMenu;
+    public GameObject gameOverMenu;
 
     //-----Variables necessary for gameplay loops, win/loss states--//
     [Header("Game Variables")]
@@ -56,5 +57,11 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(false);
             Time.timeScale = 1.0f;
         }    
+    }
+
+    public void EndGame()
+    {
+        gameOverMenu.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 }

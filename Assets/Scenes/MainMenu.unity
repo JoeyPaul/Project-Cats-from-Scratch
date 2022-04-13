@@ -688,6 +688,7 @@ MonoBehaviour:
   fallenTVSound: {fileID: 0}
   player: {fileID: 0}
   pauseMenu: {fileID: 827445404}
+  gameOverMenu: {fileID: 1771518204}
   score: 0
   highScore: 0
   isGameRunning: 0

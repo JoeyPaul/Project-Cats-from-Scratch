@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     private bool playerIsDead;
     private string gameOverReason;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
             //TODO: Add different reasons for why Game Over
             Debug.LogWarning("Ran into obstacles"); //TODO: Remove after testing
             Die(gameOverReason);
+            gameManager.EndGame();
         }
     }
 
@@ -37,6 +39,8 @@ public class PlayerHealth : MonoBehaviour
         {
             gameOverReason = "You were too slow";
             Debug.LogError("You were too slow"); //TODO: Remove after testing
+            gameManager.EndGame();
+            
         }
         if (other.gameObject.tag == "Obstacle")
         {
