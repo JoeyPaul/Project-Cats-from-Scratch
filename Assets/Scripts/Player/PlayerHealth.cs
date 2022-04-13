@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die(string gameOverReasonText)
     {
         playerIsDead = true;
-        playerSprite.color = Color.black;
+        // playerSprite.color = Color.black;
         // TODO: call a GameOver() in game manager
         // TODO: Play gameover animation in game manager
         // TODO: Play gameover sound & music
