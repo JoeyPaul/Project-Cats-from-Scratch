@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Dan - Testing Scene.unity
-    guid: bf329130ec48d3f47a77f7504d181a52
+    path: Assets/Scenes/Week 2 Playtesting.unity
+    guid: 7f2546d5a588f964eba3b7aa0da958e2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
