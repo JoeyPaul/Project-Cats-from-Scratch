@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +34,6 @@ public class ObjectPooler : MonoBehaviour {
 		foreach (ObjectPoolItem item in itemsToPool) {
 			for (int i = 0; i < item.amountToPool; i++) {
 				GameObject go = (GameObject)Instantiate(item.objectToPool);
-				// Debug.Log(":: go :: " + go.gameObject.name);
 				go.SetActive(false);
 				pooledObjects.Add(go);
 			}

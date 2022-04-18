@@ -13,10 +13,8 @@ public class TileSpawnPoint : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        // Debug.Log(":: trigger :: " + other.name);
         if (other.CompareTag("Player") && !hitPlayer) {
             hitPlayer = true;
-            // Debug.Log(":: hit player :: " + other.name);
             tileSpawner.UpdateTiles();
         }
     }

@@ -30,7 +30,6 @@ public class TileSpawner : MonoBehaviour {
         Vector3 tilePosition = new Vector3(currentXPosition, 0.0f, 1.31f); // todo get these from elsewhere
         tile.transform.position = tilePosition;
         tiles.Add(tile);
-        // Debug.Log(":: placed tile ::");
     }
 
     private void RemoveTile() {
@@ -45,13 +44,11 @@ public class TileSpawner : MonoBehaviour {
         GameObject tile = tiles[0];
         if (tile != null) {
             tiles.RemoveAt(0);
-            // Debug.Log(":: returning item to pool ::");
             objectPooler.ReturnObjectToPool(tile);
         }
     }
 
     public void UpdateTiles() {
-        // Debug.Log(":: update tiles ");
         PlaceTile();
         RemoveTile();
     }

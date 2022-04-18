@@ -32,9 +32,12 @@ public class GameManager : MonoBehaviour
     public int highScore;
     public bool isGameRunning;
 
+    private ScoreManager scoreManager;
+    
     void Start()
     {
         isGameRunning = true;
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -63,5 +66,7 @@ public class GameManager : MonoBehaviour
     {
         gameOverMenu.SetActive(true);
         Time.timeScale = 0.0f;
+        
+        scoreManager.SaveHighScore();
     }
 }
