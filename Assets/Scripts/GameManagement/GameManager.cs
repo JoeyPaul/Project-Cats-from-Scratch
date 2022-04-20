@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
 
     //---------References to Components & game variables------------// 
     [Header("Component References")]
-    public GameObject player;
-    public GameObject pauseMenu;
-    public GameObject gameOverMenu;
+    private GameObject player;
+    private GameObject pauseMenu;
+    private GameObject gameOverMenu;
+    private ScoreManager scoreManager;
 
     //-----Variables necessary for gameplay loops, win/loss states--//
     [Header("Game Variables")]
@@ -32,34 +33,25 @@ public class GameManager : MonoBehaviour
     public int highScore;
     public bool isGameRunning;
 
-    private ScoreManager scoreManager;
-    
+
     void Start()
     {
         isGameRunning = true;
         scoreManager = FindObjectOfType<ScoreManager>();
+        player = FindObjectOfType<PlayerHealth>().gameObject;
+        pauseMenu = GameObject.Find("PauseGameCanvas");
+        gameOverMenu = GameObject.Find("GameOverCanvas");
+        gameOverMenu.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu(pauseMenu.activeInHierarchy);
-        }
-    }
-
-    public void TogglePauseMenu(bool pauseMenuState) // TODO: make this universal for other canvases
-    {
-        if (!pauseMenuState)
-        {
             pauseMenu.SetActive(true);
-            Time.timeScale = 0.0f;
+            Time.timeScale = 0f;
         }
-        else if (pauseMenuState)
-        {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1.0f;
-        }    
     }
 
     public void EndGame()
@@ -68,5 +60,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f;
         
         scoreManager.SaveHighScore();
+    }
+
+    // For use with the resume button in pause menu scene
+    public void unPause()
+    {
+        Time.timeScale = 1f;
     }
 }
