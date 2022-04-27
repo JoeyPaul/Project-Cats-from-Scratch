@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if (other.gameObject.tag == "Obstacle")
         {
+            gameManager.takeDamageSound.Play();
             health--;
             Debug.LogError("Hit obstacle"); //TODO: Remove after testing
         }

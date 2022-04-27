@@ -11,6 +11,7 @@ public class SceneHandler : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         StartCoroutine(WaitBeforeLoad(sceneName));
+        Time.timeScale = 1.0f;
     }
 
     public void ExitApplication()
