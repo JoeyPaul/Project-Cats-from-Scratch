@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Component References")]
     private SpriteRenderer playerSprite; // Temporary to show player death
-    private GameManager gameManager;
+    public GameManager gameManager;
 
     [Header("Health Settings")]
     public float health;
@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
         playerSprite = GetComponent<SpriteRenderer>();
         playerIsDead = false;
         health = 3.0f;
@@ -53,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die(string gameOverReasonText)
     {
         playerIsDead = true;
-        playerSprite.color = Color.black;
+        //playerSprite.color = Color.black;
         // TODO: Play gameover animation in game manager
         // TODO: Play gameover sound & music
     }
