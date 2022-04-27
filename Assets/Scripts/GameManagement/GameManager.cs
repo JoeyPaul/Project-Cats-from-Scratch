@@ -23,9 +23,11 @@ public class GameManager : MonoBehaviour
     //---------References to Components & game variables------------// 
     [Header("Component References")]
     private GameObject player;
+    private StarterAssets.ThirdPersonController playerController;
     private GameObject pauseMenu;
     private GameObject gameOverMenu;
     private ScoreManager scoreManager;
+    private CameraMovement camera;
 
     //-----Variables necessary for gameplay loops, win/loss states--//
     [Header("Game Variables")]
@@ -38,6 +40,8 @@ public class GameManager : MonoBehaviour
     {
         isGameRunning = true;
         scoreManager = FindObjectOfType<ScoreManager>();
+        camera = FindObjectOfType<CameraMovement>();
+        playerController = FindObjectOfType<StarterAssets.ThirdPersonController>();
         player = FindObjectOfType<PlayerHealth>().gameObject;
         pauseMenu = GameObject.Find("PauseGameCanvas");
         gameOverMenu = GameObject.Find("GameOverCanvas");
@@ -52,6 +56,28 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            WalkMode();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RunMode();
+        }
+    }
+
+    public void WalkMode()
+    {
+        camera.speed = CameraMovement.Speed.WALK;
+        playerController.MoveSpeed = 2.5f;
+    }
+
+    public void RunMode()
+    {
+        camera.speed = CameraMovement.Speed.RUN;
+        playerController.MoveSpeed = 7.0f;
     }
 
     public void EndGame()

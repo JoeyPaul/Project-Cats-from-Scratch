@@ -31,9 +31,9 @@ public class ScoreManager : MonoBehaviour {
 
     private void Update() {
         if (Time.time - lastScoreUpdateTime >= incrementScoreEverySeconds) {
-            if (cameraMovement.speed == CameraMovement.Speed.Walk) {
+            if (cameraMovement.speed == CameraMovement.Speed.WALK) {
                 UpdateScore(walkScorePerSecond);
-            } else if (cameraMovement.speed == CameraMovement.Speed.Run) {
+            } else if (cameraMovement.speed == CameraMovement.Speed.RUN) {
                 UpdateScore(runScorePerSecond);
             }
 

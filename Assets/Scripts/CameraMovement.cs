@@ -11,8 +11,8 @@ public class CameraMovement : MonoBehaviour
       // Create an enum type so we can pick the speed from a different game manager script
     public enum Speed
     {
-        Walk, // 0
-        Run, // 1 
+        WALK, // 0
+        RUN, // 1 
     };
 
     public Speed speed;
@@ -26,14 +26,14 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         // Check if walking or running to set the correct speed and movement.
-        if (speed == Speed.Walk)
+        if (speed == Speed.WALK)
         {
             // Create The Movement by direction 
             Vector3 velocityPerSecond = directionRight.normalized * cameraWalkSpeed;
             Vector3 velocityThisFrame = velocityPerSecond * Time.deltaTime;
             transform.position += velocityThisFrame;
         }
-        else if (speed == Speed.Run) 
+        else if (speed == Speed.RUN) 
         {
             Vector3 velocityPerSecond = directionRight.normalized * cameraRunSpeed;
             Vector3 velocityThisFrame = velocityPerSecond * Time.deltaTime;
