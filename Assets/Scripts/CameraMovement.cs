@@ -20,8 +20,9 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraWalkSpeed = 2.0f;
-        cameraRunSpeed = 3.0f;
+        // Note:LS commented this out as it was overriding inspector values
+        // cameraWalkSpeed = 2.0f;
+        // cameraRunSpeed = 3.0f;
     }
     void Update()
     {

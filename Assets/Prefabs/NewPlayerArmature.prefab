@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 9155241520793813286}
   - component: {fileID: 9155241520793813287}
   - component: {fileID: 9155241520793813280}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: NewPlayerArmature
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ Transform:
   m_GameObject: {fileID: 2233484752299115360}
   m_LocalRotation: {x: 0, y: 0.73651046, z: 0, w: 0.6764262}
   m_LocalPosition: {x: -4.3, y: 2.18, z: -3.55}
-  m_LocalScale: {x: 1.343671, y: 1.343671, z: 1.343671}
+  m_LocalScale: {x: 1.3436711, y: 1.343671, z: 1.3436711}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5767129500638755388}
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 7
+  MoveSpeed: 2.5
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
@@ -816,10 +816,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.30138683
-  m_Height: 1.8836324
+  m_Radius: 0.2598609
+  m_Height: 1.6219916
   m_Direction: 1
-  m_Center: {x: 2.732415e-12, y: 0.44181597, z: 0.0069206054}
+  m_Center: {x: 0.00384065, y: 0.57262427, z: 0.020687077}
 --- !u!114 &9155241520793813280
 MonoBehaviour:
   m_ObjectHideFlags: 0

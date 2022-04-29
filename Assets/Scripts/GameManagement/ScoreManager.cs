@@ -16,12 +16,22 @@ public class ScoreManager : MonoBehaviour {
     private const string HIGH_SCORE_PREF = "HighScore";
 
     private int currentScore;
+    private int highScore;
     private float lastScoreUpdateTime;
     private float lastBonusUpdateTime;
 
     private CameraMovement cameraMovement;
 
     public int CurrentScore => currentScore;
+    public int HighScore => highScore;
+
+    private void Awake() {
+        if (PlayerPrefs.HasKey(HIGH_SCORE_PREF)) {
+            highScore = PlayerPrefs.GetInt(HIGH_SCORE_PREF);
+        } else {
+            highScore = 0;
+        }
+    }
 
     private void Start() {
         cameraMovement = FindObjectOfType<CameraMovement>();

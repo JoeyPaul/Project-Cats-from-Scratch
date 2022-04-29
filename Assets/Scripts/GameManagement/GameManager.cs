@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     public int highScore;
     public bool isGameRunning;
 
+    // todo move this to player?
+    [SerializeField] private float playerWalkSpeed = 2.5f;
+    [SerializeField] private float playerRunSpeed = 7.0f;
 
     void Start()
     {
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
         sceneMusic.Play();
+
+        playerController.MoveSpeed = playerWalkSpeed;
     }
 
     void Update()
@@ -72,13 +77,13 @@ public class GameManager : MonoBehaviour
     public void WalkMode()
     {
         cameraMove.speed = CameraMovement.Speed.WALK;
-        playerController.MoveSpeed = 2.5f;
+        playerController.MoveSpeed = playerWalkSpeed;
     }
 
     public void RunMode()
     {
         cameraMove.speed = CameraMovement.Speed.RUN;
-        playerController.MoveSpeed = 7.0f;
+        playerController.MoveSpeed = playerRunSpeed;
     }
 
     public void EndGame()
