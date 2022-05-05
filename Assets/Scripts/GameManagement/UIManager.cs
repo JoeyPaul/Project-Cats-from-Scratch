@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour {
     }
 
     private void UpdateScoreUI(int currentScore) {
-        // Debug.Log(":: update score ui :: " + currentScore);
         scoreValueText.text = currentScore.ToString();
     }
 }

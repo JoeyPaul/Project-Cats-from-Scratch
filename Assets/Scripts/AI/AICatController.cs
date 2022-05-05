@@ -41,7 +41,6 @@ public class AICatController : MonoBehaviour {
         bool hitPlayer = false;
         foreach (RaycastHit raycastHit in hits) {
             if (raycastHit.collider.CompareTag("Player")) {
-                Debug.Log(":: sphere hit :: " + raycastHit.collider.name);
                 hitPlayer = true;
             }
         }
@@ -69,7 +68,6 @@ public class AICatController : MonoBehaviour {
     }
 
     private void ChasePlayer() {
-        Debug.Log(":: chase ::");
         Vector3 moveToPosition = target.position;
         moveToPosition.y = transform.position.y;
         transform.position = Vector3.MoveTowards(transform.position, moveToPosition, moveSpeed * Time.deltaTime);
@@ -79,14 +77,12 @@ public class AICatController : MonoBehaviour {
         stopChasing = true;
         currentChaseTime = 0.0f;
         chasingPlayer = false;
-        Debug.Log(":: stop chasing :: ");
         StartCoroutine(ResetChaseValues());
     }
 
     private IEnumerator ResetChaseValues() {
         yield return new WaitForSeconds(1.5f);
         stopChasing = false;
-        Debug.Log(":: reset values ::");
     }
 
     private void OnDrawGizmos() {
@@ -94,20 +90,9 @@ public class AICatController : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
-    // private void OnCollisionEnter(Collision collision) {
-    //     if (collision.gameObject.CompareTag("Player")
-    //         && !inCrazyMode) {
-    //         Debug.Log(":: ====== collision crazy mode ");
-    //         inCrazyMode = true;
-    //         gameManager.RunMode();
-    //         StartCoroutine(ResetGameMode());
-    //     }
-    // }
-
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")
             && !inCrazyMode) {
-            Debug.Log(":: ====== trigger crazy mode ");
             inCrazyMode = true;
             gameManager.RunMode();
             StopChasingPlayer();
@@ -117,7 +102,6 @@ public class AICatController : MonoBehaviour {
 
     private IEnumerator ResetGameMode() {
         yield return new WaitForSeconds(timeInCrazyMode);
-        Debug.Log(":: == back to walk mode");
         gameManager.WalkMode();
         inCrazyMode = false;
     }

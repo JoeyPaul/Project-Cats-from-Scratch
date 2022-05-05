@@ -58,7 +58,6 @@ public class ScoreManager : MonoBehaviour {
 
     private void UpdateScore(int updateScore) {
         currentScore += updateScore;
-        // Debug.Log(":: current Score :: " + currentScore);
         OnScoreUpdated?.Invoke(currentScore);
     }
 
