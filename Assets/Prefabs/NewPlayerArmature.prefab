@@ -816,7 +816,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.2598609
+  m_Radius: 0.3
   m_Height: 1.6219916
   m_Direction: 1
   m_Center: {x: 0.00384065, y: 0.57262427, z: 0.020687077}
@@ -833,6 +833,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  maxHealth: 5
+  invicibleTime: 2
   health: 3
 --- !u!1 &2302147485422279091
 GameObject:

@@ -50,6 +50,21 @@ MonoBehaviour:
   - objectToPool: {fileID: 277634271603558561, guid: 59cd9b6fb3bf3a54698d09bf112d1b57, type: 3}
     amountToPool: 5
     shouldExpand: 1
+  - objectToPool: {fileID: 277634271603558561, guid: 9d63cabdee569e944a1b0973f5856aa7, type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 277634271603558561, guid: 7211f663806a7904c979165d8871c20e, type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 277634271603558561, guid: 177d5c2223c517a4c99c499d99157a2d, type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 277634271603558561, guid: 474dc22a54ac80344847dca67125ff8c, type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 277634271603558561, guid: cb7efe4c700dcfa4599ea4cd5366c0e5, type: 3}
+    amountToPool: 5
+    shouldExpand: 1
   pooledObjects: []
 --- !u!114 &6236298061159243451
 MonoBehaviour:
