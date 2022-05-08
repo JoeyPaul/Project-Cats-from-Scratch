@@ -78,12 +78,14 @@ public class GameManager : MonoBehaviour
     {
         cameraMove.speed = CameraMovement.Speed.WALK;
         playerController.MoveSpeed = playerWalkSpeed;
+        sceneMusic.pitch = 1.0f;
     }
 
     public void RunMode()
     {
         cameraMove.speed = CameraMovement.Speed.RUN;
         playerController.MoveSpeed = playerRunSpeed;
+        sceneMusic.pitch = 3.0f;
     }
 
     public void EndGame()
