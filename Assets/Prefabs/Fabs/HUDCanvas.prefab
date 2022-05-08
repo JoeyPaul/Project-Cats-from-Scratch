@@ -659,3 +659,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValueText: {fileID: 5520516961817450569}
   highScoreValueText: {fileID: 2058235143}
+  playerLifeValueText: {fileID: 0}
