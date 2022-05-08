@@ -147,7 +147,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 2
+  moveSpeed: 3.75
   chasePlayerTime: 8
   damageCausedToPlayerOnTouch: 0
   timeInCrazyMode: 6

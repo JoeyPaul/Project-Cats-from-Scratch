@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public bool isGameRunning;
 
     // todo move this to player?
-    [SerializeField] private float playerWalkSpeed = 2.5f;
+    [SerializeField] private float playerWalkSpeed = 5.0f;
     [SerializeField] private float playerRunSpeed = 7.0f;
 
     void Start()
