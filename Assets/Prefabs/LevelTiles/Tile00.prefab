@@ -3159,7 +3159,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 3
+  moveSpeed: 5
   chasePlayerTime: 3
   damageCausedToPlayerOnTouch: 0
   timeInCrazyMode: 9
@@ -3184,27 +3184,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.73484
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.73484
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.73484
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.99757195
+      value: 0.99708
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64081496
+      value: 0.80119
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.1982335
+      value: -3.23
       objectReference: {fileID: 0}
     - target: {fileID: 449972, guid: 8a553ddeee5519c42beedf0a1b69da88, type: 3}
       propertyPath: m_LocalRotation.w
